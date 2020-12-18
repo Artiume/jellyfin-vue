@@ -91,7 +91,6 @@
         </v-container>
       </div>
     </swiper-slide>
-    <div slot="pagination" class="swiper-pagination"></div>
   </swiper>
 </template>
 
@@ -113,10 +112,7 @@ export default Vue.extend({
         },
         initialSlide: 0,
         loop: true,
-        effect: 'slide',
-        pagination: {
-          el: '.swiper-pagination'
-        }
+        effect: 'slide'
       } as SwiperOptions
     };
   },

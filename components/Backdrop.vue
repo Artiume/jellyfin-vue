@@ -23,6 +23,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@import '~vuetify/src/styles/styles.sass';
+
 .backdrop {
   & canvas {
     position: fixed;
@@ -39,7 +41,11 @@ export default Vue.extend({
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: #{map-get($material-light, 'background')};
     opacity: 0.75;
   }
+}
+.theme--dark .backdrop::after {
+  background-color: #{map-get($material-dark, 'background')};
 }
 </style>
